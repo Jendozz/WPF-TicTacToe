@@ -1,0 +1,71 @@
+﻿<Window x:Class="WPF_TicTacToe.WindowChooseTeam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TicTacToe"
+        mc:Ignorable="d"
+        Title="WindowChooseTeam"
+        Height="200" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#777ea8" >
+    <Window.Resources>
+        <Style x:Key="ChooseButStyle" TargetType="Button">
+            <Setter Property="Margin" Value="40"></Setter>
+            <Setter Property="Background" Value="#a8b2ed"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="FontSize" Value="40"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock
+            x:Name="TextChoose"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Center"
+            Width="300"
+            Height="35"
+            Text="Выберете вашу сторону!"
+            TextAlignment="Center"
+            FontSize="18"
+            FontFamily="arial"
+            
+            ></TextBlock>
+        
+        <Button
+            x:Name="SightX"
+            Grid.Row="1"
+            Grid.Column="0"
+            Content="X"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Style="{StaticResource ChooseButStyle}" Click="SightX_Click"
+            ></Button>
+
+        <Button
+            x:Name="SightO"
+            Grid.Row="1"
+            Grid.Column="1"
+            Content="O"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Style="{StaticResource ChooseButStyle}" Click="SightO_Click"
+            ></Button>
+    </Grid>
+</Window>
